@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <DesignationDef>
+    <defName>Release</defName>
+    <texturePath>Designations/Release</texturePath>
+    <targetType>Thing</targetType>
+  </DesignationDef>
+
+  <AllowTool.ThingDesignatorDef>
+    <defName>ReleaseDesignator</defName>
+    <designatorClass>Release_Animals_into_Wild.Designator_Release</designatorClass>
+    <category>Orders</category>
+    <insertAfter>AllowTool.Designator_HaulUrgently</insertAfter>
+    <label>Relase to Wild</label>
+    <description>Release animal into the wild.</description>
+    <iconTex>Designations/Release</iconTex>
+    <dragHighlightTex>finishOffHighlight</dragHighlightTex>
+    <soundSucceeded>ThingSelected</soundSucceeded>
+    <messageSuccess>Finish_off_success</messageSuccess>
+    <messageFailure>Finish_off_failure</messageFailure>
+  </AllowTool.ThingDesignatorDef>
+</Defs>

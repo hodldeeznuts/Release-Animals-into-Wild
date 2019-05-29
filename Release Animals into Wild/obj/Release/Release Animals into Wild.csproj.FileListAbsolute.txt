@@ -1,0 +1,13 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Release Animals into Wild\About\About.xml
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Release Animals into Wild\Defs\Designations.xml
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Release Animals into Wild\Defs\Jobs.xml
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Release Animals into Wild\Release Animals into Wild.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Release Animals into Wild\Release Animals into Wild.pdb
+C:\Users\donav\source\repos\Release Animals into Wild\Release Animals into Wild\obj\Release\Release Animals into Wild.csprojAssemblyReference.cache
+C:\Users\donav\source\repos\Release Animals into Wild\Release Animals into Wild\obj\Release\Release Animals into Wild.csproj.CoreCompileInputs.cache
+C:\Users\donav\source\repos\Release Animals into Wild\Release Animals into Wild\obj\Release\Release Animals into Wild.dll
+C:\Users\donav\source\repos\Release Animals into Wild\Release Animals into Wild\obj\Release\Release Animals into Wild.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Release Animals into Wild\Defs\ReverseDesignators.xml
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Release Animals into Wild\Defs\WorkGivers.xml
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Release Animals into Wild\Textures\Designations\Release.png
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Release Animals into Wild\About\Preview.png

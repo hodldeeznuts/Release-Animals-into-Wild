@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <WorkGiverDef>
+    <defName>Release</defName>
+    <label>release animals</label>
+    <giverClass>Release_Animals_into_Wild.WorkGiver_Release</giverClass>
+    <workType>Handling</workType>
+    <verb>release</verb>
+    <gerund>releasing</gerund>
+    <priorityInType>100</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+</Defs>
