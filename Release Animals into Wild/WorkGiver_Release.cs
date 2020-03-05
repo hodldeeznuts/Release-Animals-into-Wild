@@ -12,17 +12,23 @@ namespace Release_Animals_into_Wild
 {
     public class WorkGiver_Release : WorkGiver_Scanner
     {
+        public static WorkGiver_Release CreateInstance()
+        {
+            return new WorkGiver_Release
+            {
+                def = AllowToolReleaseDefOf.Release
+            };
+        }
+
         public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn)
         {
-            foreach (Designation des in pawn.Map.designationManager.SpawnedDesignationsOfDef(DefDatabase<DesignationDef>.GetNamed("Release")))
+            foreach (Designation des in pawn.Map.designationManager.SpawnedDesignationsOfDef(AllowToolReleaseDefOf.ReleaseDesignation))
             {
                 yield return des.target.Thing;
             }
             yield break;
         }
 
-        // Token: 0x170000DF RID: 223
-        // (get) Token: 0x06000618 RID: 1560 RVA: 0x0003A637 File Offset: 0x00038A37
         public override PathEndMode PathEndMode
         {
             get
@@ -31,7 +37,6 @@ namespace Release_Animals_into_Wild
             }
         }
 
-        // Token: 0x06000619 RID: 1561 RVA: 0x0003A63C File Offset: 0x00038A3C
         public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
             Pawn pawn2 = t as Pawn;
@@ -39,7 +44,7 @@ namespace Release_Animals_into_Wild
             {
                 return false;
             }
-            if (pawn.Map.designationManager.DesignationOn(t, DefDatabase<DesignationDef>.GetNamed("Release")) == null)
+            if (pawn.Map.designationManager.DesignationOn(t, AllowToolReleaseDefOf.ReleaseDesignation) == null)
             {
                 Log.Error("Did not find release designation");
                 return false;
@@ -57,7 +62,7 @@ namespace Release_Animals_into_Wild
             {
                 return false;
             }
-            if (pawn.story != null && pawn.story.WorkTagIsDisabled(WorkTags.Animals))
+            if (pawn.WorkTagIsDisabled(WorkTags.Animals))
             {
                 JobFailReason.Is("Pawn incapable of Animal Handling", null);
                 return false;
@@ -65,7 +70,6 @@ namespace Release_Animals_into_Wild
             return true;
         }
 
-        // Token: 0x0600061A RID: 1562 RVA: 0x0003A6F1 File Offset: 0x00038AF1
         public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
             return new Job(DefDatabase<JobDef>.GetNamed("Release"), t);

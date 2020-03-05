@@ -5,6 +5,18 @@
   <url />
   <supportedVersions>
     <li>1.0</li>
+    <li>1.1</li>
   </supportedVersions>
+  <packageId>hodlhodl.releaseanimals</packageId>
   <description>Got too many animals? Can't stand to slaughter an innocent friendly squirrel for such a lousy quanity of meat? Release them back to the wild!</description>
+  <modDependencies>
+    <li>
+      <packageId>UnlimitedHugs.AllowTool</packageId>
+      <displayName>Allow Tool</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/761421485</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>UnlimitedHugs.AllowTool</li>
+  </loadAfter>
 </ModMetaData>

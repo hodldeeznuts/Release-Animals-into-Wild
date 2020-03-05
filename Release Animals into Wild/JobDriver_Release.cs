@@ -29,7 +29,7 @@ namespace Release_Animals_into_Wild
         protected override IEnumerable<Toil> MakeNewToils()
         {
             this.FailOnAggroMentalState(TargetIndex.A);
-            this.FailOnThingMissingDesignation(TargetIndex.A, DefDatabase<DesignationDef>.GetNamed("Release"));
+            this.FailOnThingMissingDesignation(TargetIndex.A, AllowToolReleaseDefOf.ReleaseDesignation);
             yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.Touch);
             yield return Toils_General.WaitWith(TargetIndex.A, 180, true, false);
             yield return Toils_General.Do(delegate

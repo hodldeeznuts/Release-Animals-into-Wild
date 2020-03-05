@@ -11,9 +11,11 @@ namespace Release_Animals_into_Wild
 {
     public class Designator_Release : Designator_SelectableThings
     {
-        public Designator_Release(ThingDesignatorDef def) : base(def)
-        {
+        protected override DesignationDef Designation => AllowToolReleaseDefOf.ReleaseDesignation;
 
+        public Designator_Release()
+        {
+            UseDesignatorDef(AllowToolReleaseDefOf.ReleaseDesignator);
         }
 
         public static bool IsValidDesignationTarget(Thing t)
@@ -48,10 +50,11 @@ namespace Release_Animals_into_Wild
 
         public override void DesignateThing(Thing t)
         {
-            if (!CanDesignateThing(t).Accepted) return;
-            t.ToggleDesignation(Designation, true);
+            bool flag = !this.CanDesignateThing(t).Accepted;
+            if (!flag)
+            {
+                HugsLibUtility.ToggleDesignation(t, AllowToolReleaseDefOf.ReleaseDesignation, true);
+            }
         }
-
-        protected override DesignationDef Designation => DefDatabase<DesignationDef>.GetNamed("Release");
     }
 }
