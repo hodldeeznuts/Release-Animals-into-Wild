@@ -62,7 +62,7 @@ namespace Release_Animals_into_Wild
             {
                 return false;
             }
-            if (pawn.WorkTagIsDisabled(WorkTags.Animals))
+            if (pawn.story != null && pawn.story.WorkTagIsDisabled(WorkTags.Animals))
             {
                 JobFailReason.Is("Pawn incapable of Animal Handling", null);
                 return false;
